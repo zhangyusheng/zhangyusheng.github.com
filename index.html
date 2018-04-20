@@ -288,6 +288,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/16/test/" itemprop="url">
+                  linux下环境变量配置总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-16 15:49:12" itemprop="dateCreated datePublished" datetime="2018-04-16T15:49:12+08:00">2018-04-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-04-20 18:13:11" itemprop="dateModified" datetime="2018-04-20T18:13:11+08:00">2018-04-20</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>这是一个测试哦</em></p>
+<hr>
+<p>==你好==</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if data = 0 &#123;</span><br><span class="line">    fmt.println(&apos;hello&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+<div>
+      
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/linuxpath/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -392,164 +550,6 @@
 <h4 id="etc-bashrc-执行时机及生效对象"><a href="#etc-bashrc-执行时机及生效对象" class="headerlink" title="/etc/bashrc 执行时机及生效对象"></a>/etc/bashrc 执行时机及生效对象</h4><p>/etc/profile 为每个运行bash shell的用户执行此文件（注意，shell类型为bash)，每当bash shell被打开时，该文件被读取<br>该文件的修改会对所有使用bash shell的用户生效，修改不用重启，只要重新在打开一个bash shell即可生效</p>
 <h4 id="bash-profile-执行时机及生效对象"><a href="#bash-profile-执行时机及生效对象" class="headerlink" title="~/.bash_profile 执行时机及生效对象"></a>~/.bash_profile 执行时机及生效对象</h4><p>~/.bash_profile文件位于用户家目录，是属于用户专属的bash配置，只对该用户生效，执行时机是用户登陆时，该文件仅被执行一次，登陆后重新打开bash shell 不会再次执行该文件<br>此文件类似/etc/profile 需要重启才能生效</p>
 <h4 id="bashrc-执行时机及生效对象"><a href="#bashrc-执行时机及生效对象" class="headerlink" title="~/.bashrc 执行时机及生效对象"></a>~/.bashrc 执行时机及生效对象</h4><p>~/.bashrc 同样位于用户的家目录，也只对当前用户生效，不同的是该文件在每次该用户打开bash shell时都会执行一遍，并且修改不需要重启，新开个窗口就好了<br>举个例子，我们安装完应用，如果不想输入冗长的路径，可以把应用的执行文件加载到path环境变量里，怎么加？<br>方法一：修改用户家目录下~/.bash_profile文件，在$PATH下追加应用路径，但是该配置需要source且只在当前bash shell 窗口生效<br>方法二：修改用户家目录下~/.bashrc 在$PATH下追加应用路径，该配置即时生效，新建窗口无需source</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-<div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/test/" itemprop="url">
-                  linux下环境变量配置总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-16 15:49:12" itemprop="dateCreated datePublished" datetime="2018-04-16T15:49:12+08:00">2018-04-16</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-04-20 18:13:11" itemprop="dateModified" datetime="2018-04-20T18:13:11+08:00">2018-04-20</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><em>这是一个测试哦</em></p>
-<hr>
-<p>==你好==</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if data = 0 &#123;</span><br><span class="line">    fmt.println(&apos;hello&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
